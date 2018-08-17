@@ -25,10 +25,10 @@ manpages: $(MANDIR)/man1/wpmstats.1.gz $(MANDIR)/man1/wpmtable.1.gz
 	@echo " done"
 
 $(BINDIR)/wpmstats.awk: wpmstats.awk
-	@cp $< $@ >/dev/null 2>/dev/null
+	@install -Dm655 $< $@
 
 $(BINDIR)/wpmtable.awk: wpmtable.awk
-	@cp $< $@ >/dev/null 2>/dev/null
+	@install -Dm655 $< $@
 
 $(MANDIR)/man1/wpmstats.1.gz: wpmstats.1
 	@gzip <$< >$@
